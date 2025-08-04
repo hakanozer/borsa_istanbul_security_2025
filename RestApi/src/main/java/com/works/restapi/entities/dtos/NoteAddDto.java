@@ -17,7 +17,7 @@ public class NoteAddDto implements Serializable {
     @NotEmpty
     String title;
     @NotNull
-    @Size(min = 5)
+    @Size(min = 5, max = 200)
     @NotEmpty
     String content;
 }
