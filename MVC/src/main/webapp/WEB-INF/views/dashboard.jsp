@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +10,15 @@
 </head>
 <body>
 <div class="container">
-    <h3>Dashboard</h3>
+    <h3>Dashboard - ${user}</h3>
+    <h2><c:out value="${data}"></c:out></h2>
+    <form action="/dataSend" method="post" class="col-sm-4">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Data</label>
+            <input name="data" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 </body>
 </html>
